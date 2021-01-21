@@ -19,11 +19,12 @@ public class SuperArray {
   } //end add()
 
   public void add(int index, int val) {
-
+    
   } //end second add()
 
   public void grow(int n) {
-
+    int size = this.array.length;
+    this.array = new int(size + n);
   } //end grow()
 
   public void set(int i, int val) {
@@ -31,7 +32,7 @@ public class SuperArray {
   } //end set()
 
   public boolean isEmpty() {
-    return true;
+    return (this.numValues == 0);
   } //end isEmpty()
 
   public void remove(int index) {
@@ -39,7 +40,11 @@ public class SuperArray {
   } //end remove()
 
   public String toString() {
-    return Arrays.toString(this.array);
+    String output = "";
+    for (int i = 0; i < this.numValues; i++) {
+      output += this.array[i] + " ";
+    } //end for loop
+    return output;
   } //end toString()
 
 } //end class
