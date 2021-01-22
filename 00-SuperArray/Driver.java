@@ -7,10 +7,18 @@ public class Driver {
     arr1.add(95);
     arr1.add(95);
     System.out.println(arr1);
-    System.out.println(arr1.isEmpty());
-    arr1.grow(2);
-    arr1.add(95);
+    arr1.set(2, 100);
+    arr1.set(3, 100);
     System.out.println(arr1);
+    System.out.println(arr1.isEmpty());
+
+    SuperArray arr2 = new SuperArray();
+    arr2.add(90);
+    arr2.set(4, 90);
+    arr2.set(2, 90);
+    arr2.add(99);
+    arr2.set(9, 100);
+    System.out.println(arr2);
 
   } //end main
 
