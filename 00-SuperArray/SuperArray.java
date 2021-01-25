@@ -19,10 +19,10 @@ public class SuperArray {
   } //end add()
 
   public void add(int index, int val) {
-    if (this.array[index] != 0) {
-      this.array[index] = val;
-    } //end if the value is not 0
-    this.numValues += index;
+    this.array[index] = val;
+    if (index > this.numValues) {
+      this.numValues = index + 1;
+    } //end if
   } //end second add()
 
   public void grow(int n) {
@@ -31,10 +31,8 @@ public class SuperArray {
   } //end grow()
 
   public void set(int i, int val) {
-    this.array[i] = val;
-    if (i > this.numValues) {
-      this.numValues = i + 1;
-    } //end if
+    this.array.insert(i, val);
+    this.numValues++;
   } //end set()
 
   public boolean isEmpty() {
