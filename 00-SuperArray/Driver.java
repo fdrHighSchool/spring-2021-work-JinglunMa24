@@ -9,7 +9,6 @@ public class Driver {
     System.out.println(arr1);
     arr1.add(2, 100);
     arr1.add(3, 100);
-    arr1.set(1, 99);
     System.out.println(arr1);
     System.out.println(arr1.isEmpty());
 
@@ -20,6 +19,16 @@ public class Driver {
     arr2.add(99);
     arr2.add(9, 100);
     System.out.println(arr2);
+
+    SuperArray arr3 = new SuperArray();
+    arr3.add(90);
+    arr3.add(91);
+    arr3.add(93);
+    arr3.add(94);
+    arr3.add(95);
+    System.out.println(arr3);
+    arr3.set(2, 92);
+    System.out.println(arr3);
 
   } //end main
 
