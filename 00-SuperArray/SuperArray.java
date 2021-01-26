@@ -31,7 +31,10 @@ public class SuperArray {
   } //end grow()
 
   public void set(int i, int val) {
-    this.array.insert(i, val);
+    for (int j = this.numValues; j >= this.numValues - i; j--) {
+      this.array[j] = this.array[j - 1];
+    } //end for loop
+    this.array[i] = val;
     this.numValues++;
   } //end set()
 
