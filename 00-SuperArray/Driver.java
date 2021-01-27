@@ -29,6 +29,20 @@ public class Driver {
     System.out.println(arr3);
     arr3.set(2, 92);
     System.out.println(arr3);
+    arr3.add(7, 97);
+    System.out.println(arr3);
+    arr3.set(6, 96);
+    System.out.println(arr3);
+    arr3.set(9, 99);
+    System.out.println(arr3);
+
+    SuperArray arr4 = new SuperArray();
+    for (int i = 0; i < 10; i++) {
+      arr4.add(i * 10);
+    } //end for loop
+    System.out.println(arr4);
+    arr4.add(100);
+    System.out.println(arr4);
 
   } //end main
 
