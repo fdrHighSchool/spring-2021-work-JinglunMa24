@@ -26,6 +26,10 @@ public class SuperArray {
   } //end add()
 
   public void add(int index, int val) {
+    if (index > this.array.length) {
+      grow(index - this.numValues + 1);
+    } //end grow size if array is full
+    
     this.array[index] = val;
     if (index > this.numValues) {
       this.numValues = index + 1;
@@ -58,7 +62,6 @@ public class SuperArray {
       else {
         this.array[i] = val;
       } //end else
-
     } //end else
 
   } //end set()
