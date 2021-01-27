@@ -53,6 +53,8 @@ public class Driver {
     System.out.println(arr5);
     arr5.add(100);
     System.out.println(arr5);
+    arr5.add(7, 90);
+    System.out.println(arr5);
 
   } //end main
 
