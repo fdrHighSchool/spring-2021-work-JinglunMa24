@@ -2,19 +2,25 @@ import java.util.*;
 
 public class SuperArray {
   private int[] array;
+  private String name;
   private int numValues;
 
-  public SuperArray(int size) {
+  public SuperArray(String name, int size) {
     this.array = new int[size];
+    this.name = name;
     this.numValues = 0;
   } //end structor
 
-  public SuperArray() {
+  public SuperArray(String name) {
     this.array = new int[10];
+    this.name = name;
     this.numValues = 0;
   } //end overloaded
 
   public void add(int val) {
+    if (this.numValues == this.array.length) {
+      grow(1);
+    } //end grow size if array is full
     this.array[this.numValues] = val;
     this.numValues++;
   } //end add()
@@ -27,8 +33,11 @@ public class SuperArray {
   } //end second add()
 
   public void grow(int n) {
-    int size = this.array.length;
-    this.array = new int[size + n];
+    int[] temp = new int[this.array.length + n];
+    for (int i = 0; i < this.numValues; i++) {
+      temp[i] = this.array[i];
+    } //end for loop
+    this.array = temp;
   } //end grow()
 
   public void set(int i, int val) {
@@ -63,7 +72,7 @@ public class SuperArray {
   } //end remove()
 
   public String toString() {
-    String output = "";
+    String output = this.name + ": ";
     for (int i = 0; i < this.numValues; i++) {
       output += this.array[i] + " ";
     } //end for loop
