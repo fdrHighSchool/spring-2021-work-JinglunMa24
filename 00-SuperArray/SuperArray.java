@@ -11,6 +11,7 @@ public class SuperArray {
 
   public SuperArray() {
     this.array = new int[10];
+    this.numValues = 0;
   } //end overloaded
 
   public void add(int val) {
@@ -31,11 +32,26 @@ public class SuperArray {
   } //end grow()
 
   public void set(int i, int val) {
-    for (int j = this.numValues; j >= this.numValues - i; j--) {
-      this.array[j] = this.array[j - 1];
-    } //end for loop
-    this.array[i] = val;
-    this.numValues++;
+    if (this.array[i] != 0) {
+      for (int j = this.numValues; j >= this.numValues - i; j--) {
+        this.array[j] = this.array[j - 1];
+      } //end for loop
+      this.array[i] = val;
+      this.numValues++;
+    } //end if the value in that index is not 0
+
+    else {
+      if (i > this.numValues) {
+        this.array[i] = val;
+        this.numValues = i + 1;
+      } //end if
+
+      else {
+        this.array[i] = val;
+      } //end else
+
+    } //end else
+
   } //end set()
 
   public boolean isEmpty() {
