@@ -29,7 +29,7 @@ public class SuperArray {
     if (index > this.array.length) {
       grow(index - this.numValues + 1);
     } //end grow size if array is full
-    
+
     this.array[index] = val;
     if (index > this.numValues) {
       this.numValues = index + 1;
@@ -71,7 +71,12 @@ public class SuperArray {
   } //end isEmpty()
 
   public void remove(int index) {
-
+    if (index < this.numValues) {
+      for (int i = index; i < this.numValues - 1; i++) {
+        this.array[i] = this.array[i + 1];
+      } //end for loop
+      this.numValues--;
+    } //end if
   } //end remove()
 
   public String toString() {
