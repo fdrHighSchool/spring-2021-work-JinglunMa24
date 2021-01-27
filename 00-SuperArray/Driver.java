@@ -56,6 +56,27 @@ public class Driver {
     arr5.add(7, 90);
     System.out.println(arr5);
 
+    SuperArray arr6 = new SuperArray("arr6");
+    for (int i = 0; i < 10; i++) {
+      arr6.add(i * 10);
+    } //end for loop
+    System.out.println(arr6);
+    arr6.remove(0);
+    arr6.add(100);
+    System.out.println(arr6);
+    arr6.add(5, 0);
+    System.out.println(arr6);
+    arr6.remove(5);
+    System.out.println(arr6);
+
+    SuperArray arr7 = new SuperArray("arr7");
+    for (int i = 0; i < 5; i++) {
+      arr7.add(i * 10);
+    } //end for loop
+    System.out.println(arr7);
+    arr7.remove(7);
+    System.out.println(arr7);
+
   } //end main
 
 } //end class
