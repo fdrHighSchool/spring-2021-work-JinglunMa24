@@ -9,6 +9,28 @@ public class GradeBook {
 
   public void addExamGrade(int val) {
     this.exam.add(val);
-  } //end enterExamGrade
+  } //end addExamGrade
+
+  public void addHWGrade(int val) {
+    this.homework.add(val);
+  } //end addHWGrade()
+
+  public double getExamAverage() {
+    double sum = 0;
+    int count = 0;
+    for (int i = 0; i < this.exam.length; i++) {
+      if (this.exam[i] != 0) {
+        sum += this.exam[i];
+        count = i + 1;
+      } //end if
+    } //end for loop
+    return sum / count;
+  } //end getExamAverage()
+
+  public String toString() {
+    String output = "";
+    output += this.exam + "\n" + this.homework;
+    return output;
+  } //end toString()
 
 } //end class
