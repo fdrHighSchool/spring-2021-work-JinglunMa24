@@ -17,14 +17,10 @@ public class GradeBook {
 
   public double getExamAverage() {
     double sum = 0;
-    int count = 0;
-    for (int i = 0; i < this.exam.length; i++) {
-      if (this.exam[i] != 0) {
-        sum += this.exam[i];
-        count = i + 1;
-      } //end if
+    for (int i = 0; i < this.exam.getSize(); i++) {
+      sum += this.exam[i];
     } //end for loop
-    return sum / count;
+    return sum / this.exam.getSize();
   } //end getExamAverage()
 
   public String toString() {
