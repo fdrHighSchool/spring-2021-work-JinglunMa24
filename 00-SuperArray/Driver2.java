@@ -6,7 +6,7 @@ public class Driver2 {
     book1.addExamGrade(95);
     book1.addHWGrade(90);
     System.out.println(book1);
-    book1.getExamAverage();
+    System.out.println(book1.getExamAverage());
 
   } //end main
 
