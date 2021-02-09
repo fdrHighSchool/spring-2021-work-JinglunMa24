@@ -83,6 +83,10 @@ public class SuperArray {
     return this.numValues;
   } //end getSize()
 
+  public int getValues(int i) {
+    return this.array[i];
+  } //end getValues()
+
   public String toString() {
     String output = this.name + ": ";
     for (int i = 0; i < this.numValues; i++) {
