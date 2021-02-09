@@ -18,7 +18,7 @@ public class GradeBook {
   public double getExamAverage() {
     double sum = 0;
     for (int i = 0; i < this.exam.getSize(); i++) {
-      sum += this.exam[i];
+      sum += this.exam.getValues(i);
     } //end for loop
     return sum / this.exam.getSize();
   } //end getExamAverage()
