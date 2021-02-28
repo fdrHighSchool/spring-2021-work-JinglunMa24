@@ -33,20 +33,20 @@ public class Point {
     setLocation(x + dx, y + dy);
   } //end translate()
 
-  public double distance(int x2, int y2) {
-    return Math.sqrt(Math.pow(x2 - x, 2) + Math.pow(y2 - y, 2));
+  public double distance(Point point) {
+    return Math.sqrt(Math.pow(point.getX() - this.x, 2) + Math.pow(point.getY() - this.y, 2));
   } //end distance()
 
-  public String midPoint(int x2, int y2) {
-    return "(" + (x2 - x) / 2 + ", " + (y2 - y) / 2 + ")";
+  public Point midPoint(Point point) {
+    return new Point((point.getX() + this.x) / 2, (point.getY() + this.y) / 2);
   } //end midPoint()
 
-  public double slope(int x2, int y2) {
-    return (y2 - y) / (x2 - x);
+  public double slope(Point point) {
+    return (point.getY() - this.y) / (point.getX() - this.x);
   } //end slope()
 
-  public String isCollinear(int x2, int y2, int x3, int y3) {
-    if (slope(x2, y2) == slope(x3, y3)) {
+  public String isCollinear(Point point1, Point point2) {
+    if (slope(point1) == slope(point2)) {
       return "The three points are collinear.";
     } //end if
     return "The three points are NOT collinear.";
