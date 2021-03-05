@@ -12,7 +12,7 @@ public class Q4_2018 {
   public static boolean isLatin(int[][] square) {
     if (containsDuplicates(square[0])) {
       for (int i = 0; i < square.length; i++) {
-        if (hasAllValues(square[0], square[i]) || hasAllValues(square[0], getColumn(square, i))) {
+        if (hasAllValues(square[0], square[i]) && hasAllValues(square[0], getColumn(square, i))) {
           return true;
         } //end if
         return false;
