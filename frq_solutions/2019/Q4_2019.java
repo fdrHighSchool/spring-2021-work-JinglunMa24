@@ -6,8 +6,8 @@ public class Q4_2019{
     for(int i = 0; i < numRows; i++ ){
       for(int j = 0; j < numColumns; j++){
         int random = (int)(Math.random() * 101);
-        if (random >= 40 ){
-          this.lights[numRows][numColumns] = false;
+        if (random < 40){
+          lights[numRows][numColumns] = true;
         } //end if
       } //end for j loop
     } //end for i loop
@@ -20,12 +20,12 @@ public class Q4_2019{
         count++;
       } //end if
     } //end for loop
-    if (count % 3 == 0){
-      return true;
-    } //end if
-    else if (count % 2 == 0){
+    if (lights[numRows][numColumns] && count % 2 == 0){
       return false;
     } //end else
+    else if (lights[numRows][numColumns] == false && count % 3 == 0){
+      return true;
+    } //end if
     return lights[row][col];
   } //end evaluateLight()
 
