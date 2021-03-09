@@ -1,4 +1,6 @@
 public class Q4_2012 {
+
+  // Part A
   public int countWhitePixels() {
     int count = 0;
     for (int row = 0; row < pixelValues.length; row++) {
@@ -11,6 +13,8 @@ public class Q4_2012 {
     return count;
   } //end countWhitePixels()
 
+
+  // Part B
   public void processImage() {
     for (int row = 0; row < pixelValues.length - 2; row++) {
       for (int col = 0; col < pixelValues[row].length - 2; col++) {
