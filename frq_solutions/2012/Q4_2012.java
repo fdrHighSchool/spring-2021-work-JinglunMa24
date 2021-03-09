@@ -19,6 +19,9 @@ public class Q4_2012 {
     for (int row = 0; row < pixelValues.length - 2; row++) {
       for (int col = 0; col < pixelValues[row].length - 2; col++) {
         pixelValues[row][col] -= pixelValues[row + 2][col + 2];
+        if (pixelValues[row][col] < BLACK) {
+          pixelValues[row][col] == BLACK;
+        } //end if
       } //end for col loop
     } //end for row loop
   } //end processImage()
