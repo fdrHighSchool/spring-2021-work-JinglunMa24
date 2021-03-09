@@ -5,7 +5,7 @@ public class Q4_2012 {
     int count = 0;
     for (int row = 0; row < pixelValues.length; row++) {
       for (int col = 0; col < pixelValues[row].length; col++) {
-        if (pixelValues[row][col] == BLACK) {
+        if (pixelValues[row][col] == WHITE) {
           count++;
         } //end if
       } //end for col loop
