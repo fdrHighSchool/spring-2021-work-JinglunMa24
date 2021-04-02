@@ -18,4 +18,15 @@ public class Q2_2016 {
     return false;
   } //end containsWord()
 
+
+  // Part C
+  public List<LogMessage> removeMessages(String keyword) {
+    for (int i = messageList.size() - 1; i >= 0; i--) {
+      if (messageList.get(i).containsWord(keyword)) {
+        messageList.remove(i);
+      } //end if
+    } //end for loop
+    return messageList;
+  } //end removeMessages()
+
 } //end Q2_2016
