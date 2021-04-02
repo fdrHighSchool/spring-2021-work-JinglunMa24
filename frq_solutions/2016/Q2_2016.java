@@ -21,12 +21,14 @@ public class Q2_2016 {
 
   // Part C
   public List<LogMessage> removeMessages(String keyword) {
+    ArrayList<LogMessage> arr = new ArrayList<LogMessage>();
     for (int i = messageList.size() - 1; i >= 0; i--) {
       if (messageList.get(i).containsWord(keyword)) {
+        arr.add(messageList.get(i));
         messageList.remove(i);
       } //end if
     } //end for loop
-    return messageList;
+    return arr;
   } //end removeMessages()
 
 } //end Q2_2016
