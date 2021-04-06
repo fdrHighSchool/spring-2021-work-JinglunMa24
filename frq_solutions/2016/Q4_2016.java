@@ -31,7 +31,7 @@ public class Q4_2016 {
       count++;
     } //end while
     while (count < wordList.size() - 1) {
-      output += wordList.get(count) + gap;
+      output += wordList.get(count) + gap;  // 1 point
       count++;
     } //end while
     output += wordList.get(wordList.size() - 1);
