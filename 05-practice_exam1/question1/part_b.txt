@@ -5,4 +5,6 @@ private String[] mixedWords(String[] words) {
     output[i + 1] = recombine(words[i + 1], words[i]);
   } //end for loop
   return output;
+
+  Total Points: 5 pts
 } //end mixedWords()
