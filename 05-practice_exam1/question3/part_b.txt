@@ -1,9 +1,9 @@
 public boolean updateAllTemps(double tolerance) {
-  double[][] new = temps;
-  for (int row = 1; row < new.length - 1; row++) {
-    for (int col = 1; col < new[row].length - 1; col++) {
-      new[row][col] = computeTemp(row, col);
-      if (Math.abs(new[row][col] - temps[row][col]) < tolerance) {
+  double[][] news = temps;
+  for (int row = 1; row < news.length - 1; row++) {
+    for (int col = 1; col < news[row].length - 1; col++) {
+      news[row][col] = computeTemp(row, col);
+      if (Math.abs(news[row][col] - temps[row][col]) < tolerance) {
         return true;
       } //end if
     } //end col
