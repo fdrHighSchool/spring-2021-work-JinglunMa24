@@ -3,4 +3,6 @@ public static boolean isMountain(int[] array) {
     return isIncreasing(array, getPeakIndex(array) + 1) && isDecreasing(array, getPeakIndex(array));
   } //end if there's a peak value
   return false;
+
+  Total Points: 4 pts
 } //end isMountain()
