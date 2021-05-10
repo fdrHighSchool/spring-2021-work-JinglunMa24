@@ -5,4 +5,6 @@ public static int getPeakIndex(int[] array) {
     } //end if
   } //end for loop
   return -1;
+
+  Total Points: 5 pts
 } //end getPeakIndex()
