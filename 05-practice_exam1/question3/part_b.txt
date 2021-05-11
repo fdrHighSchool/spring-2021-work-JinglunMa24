@@ -9,4 +9,6 @@ public boolean updateAllTemps(double tolerance) {
     } //end col
   } //end row
   return false;
+
+  Total Points: 5 pts
 } //end updateAllTemps()

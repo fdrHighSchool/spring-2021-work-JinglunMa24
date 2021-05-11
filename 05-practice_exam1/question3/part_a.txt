@@ -3,4 +3,6 @@ private double computeTemp(int row, int col) {
     return (temps[row - 1][col] + temps[row + 1][col] + temps[row][col - 1] + temps[row][col + 1]) / 4;
   } //end if the row or col are border
   return temps[row][col];
+
+  Total Points: 4 pts
 } //end computeTemp()
