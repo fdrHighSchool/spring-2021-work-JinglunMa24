@@ -2,4 +2,6 @@ public void recordScores(int[] stuScores) {
   for (score : stuScores) {
     record(score);
   } //end for each
+
+  Total Points: 2 pts
 } //end recordScores()

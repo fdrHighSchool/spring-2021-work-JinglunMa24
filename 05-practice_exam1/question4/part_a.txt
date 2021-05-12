@@ -13,4 +13,6 @@ public boolean record(int score) {
     scoreList.add(new ScoreInfo(score));
     return true;
   } //end for loop
+
+  Total Points: 7 pts
 } //end record()
