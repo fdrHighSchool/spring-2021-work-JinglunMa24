@@ -1,0 +1,14 @@
+public static int hailstoneLength(int n) {
+  int count = 1;
+  while (n != 1) {
+    if (n % 2 == 0) {
+      n /= 2;
+      count++;
+    } //end if
+    else {
+      n = 3 * n + 1;
+      count++;
+    } //end else
+  } //end while
+  return count;
+} //end hailstoneLength()
