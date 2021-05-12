@@ -1,0 +1,5 @@
+public void recordScores(int[] stuScores) {
+  for (score : stuScores) {
+    record(score);
+  } //end for each
+} //end recordScores()
