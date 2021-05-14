@@ -11,4 +11,6 @@ public static int hailstoneLength(int n) {
     } //end else
   } //end while
   return count;
+
+  Total Points: 3 pts
 } //end hailstoneLength()

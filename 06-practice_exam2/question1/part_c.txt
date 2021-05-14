@@ -6,4 +6,6 @@ public static double propLong(int n) {
     } //end if
   } //end for loop
   return (double) count / n;
+
+  Total Points: 4 pts;
 } //end propLong()

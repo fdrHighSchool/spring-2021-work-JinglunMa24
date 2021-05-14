@@ -1,3 +1,5 @@
 public static boolean isLongSeq(int n) {
   return hailstoneLength(n) > n;
+
+  Total Points: 2 pts;
 } //end isLongSeq()
