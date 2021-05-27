@@ -12,4 +12,7 @@ void draw() {
   rect(mouseX, mouseY, mouseX/2+10, mouseY/2+10);
   fill(255,204);
   
+  int inverseX = width - mouseX;
+  int inverseY = height - mouseY;
+  circle(inverseX, inverseY, inverseX/5 + inverseY/5);
 }
