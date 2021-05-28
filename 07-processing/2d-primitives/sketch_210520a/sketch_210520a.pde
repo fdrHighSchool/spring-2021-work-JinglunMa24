@@ -3,9 +3,18 @@ void setup() {
 }
 
 void draw() {
-  strokeWeight(1);
-  rect(50, 100, 50, 100);
-  point(50, 100);
-  circle(200, 200, 50);
-  arc(200, 100, 80, 80, 0, PI, PIE);
+  strokeWeight(2);
+  fill(245, 243, 15, 96);
+  circle(250, 250, 200);
+  
+  fill(0, 0, 0, 0);
+  ellipse(220, 220, 35, 50);
+  ellipse(280, 220, 35, 50);
+  
+  fill(255, 255, 255, 100);
+  ellipse(220, 232, 25, 25);
+  ellipse(280, 232, 25, 25);
+  
+  noFill();
+  arc(250, 260, 130, 130, QUARTER_PI, PI - QUARTER_PI);
 }
