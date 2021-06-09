@@ -7,7 +7,10 @@ void setup() {
 }
 
 void draw() {
-  x.add(0, mouseX);
-  y.add(0, mouseY);
-  rect(x.get(0), y.get(0), 80, 80);
+  if (mousePressed) {
+    x.add(0, mouseX);
+    y.add(0, mouseY);
+    fill(128, 128, 128);
+    rect(x.get(0), y.get(0), 80, 80);
+  }
 }
